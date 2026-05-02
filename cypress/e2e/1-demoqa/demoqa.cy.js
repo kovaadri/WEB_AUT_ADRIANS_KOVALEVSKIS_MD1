@@ -1,12 +1,12 @@
 import { SelectablePage } from "../../pageObjects/selectablePage";
 
 describe('Demoqa scenarios', () => {
-    context('Without auto login', () => {
+    context('Visit Selectable page', () => {
          beforeEach(() => {
             SelectablePage.visit();
         });
 
-        it('Login', () => {
+        it('Grid with multiple selections active/not active', () => {
             SelectablePage.gridButton.click();
             for (let i = 1; i <= 8; i = i + 2) {
                 SelectablePage.gridCell(i).click();
